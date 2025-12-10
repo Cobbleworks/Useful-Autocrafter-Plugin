@@ -1,0 +1,7 @@
+name: Useful-Autocrafters
+version: "${project.version}"
+main: com.usefulautocrafters.UsefulAutocrafters
+api-version: "1.21"
+author: YourName
+description: Prevents autocrafters from running out of items
+website: https://github.com/yourname/useful-autocrafters
