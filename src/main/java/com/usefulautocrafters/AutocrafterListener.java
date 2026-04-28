@@ -12,8 +12,19 @@ import org.bukkit.inventory.ItemStack;
 
 public class AutocrafterListener implements Listener {
 
+    private final UsefulAutocrafters plugin;
+    
+    public AutocrafterListener(UsefulAutocrafters plugin) {
+        this.plugin = plugin;
+    }
+
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onAutocrafterCraft(CrafterCraftEvent event) {
+        // Check if the plugin functionality is enabled
+        if (!plugin.isFeatureEnabled()) {
+            return;
+        }
+        
         Block block = event.getBlock();
         
         // Ensure we're dealing with a Crafter block
