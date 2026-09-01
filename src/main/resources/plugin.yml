@@ -3,7 +3,7 @@ version: "${project.version}"
 main: com.usefulautocrafters.UsefulAutocrafters
 api-version: "1.21"
 author: Cobbleworks
-description: Prevents autocrafters from running out of items
+description: Preserves crafter ingredients during crafting and hopper automation
 website: https://github.com/Cobbleworks/Useful-Autocrafter-Plugin
 
 commands:

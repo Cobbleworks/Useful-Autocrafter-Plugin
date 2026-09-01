@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- Prevent hoppers and other automated inventories from extracting ingredient stacks from Crafters while protection is enabled. Crafted output still enters containers through the Crafter's output face.
+
 ## [1.0.0] - 2026-04-29
 
 Initial release of Useful Autocrafter - a Paper plugin that prevents autocrafters from depleting ingredient slots below 1 item.
