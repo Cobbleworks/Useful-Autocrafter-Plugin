@@ -10,6 +10,9 @@ import org.bukkit.event.block.CrafterCraftEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+/**
+ * Restores the reserved ingredient in each crafter slot after a successful craft.
+ */
 public class AutocrafterListener implements Listener {
 
     private final UsefulAutocrafters plugin;

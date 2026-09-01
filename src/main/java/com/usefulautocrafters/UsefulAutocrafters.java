@@ -2,6 +2,9 @@ package com.usefulautocrafters;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+/**
+ * Registers the crafter safeguard and its runtime toggle command.
+ */
 public class UsefulAutocrafters extends JavaPlugin {
 
     private boolean featureEnabled = true;
