@@ -1,9 +1,10 @@
 <p align="center">
-  <img src="images/plugin-logo.png" alt="Useful Autocrafter Plugin" width="200" height="200" />
+  <img src="images/plugin-logo.png" alt="Cobbleworks - Useful Autocrafter Plugin" width="200" height="200" />
 </p>
-<h1 align="center">Useful Autocrafter Plugin</h1>
+<h1 align="center">Cobbleworks - Useful Autocrafter Plugin</h1>
 <p align="center">
-  <b>Keep automated recipes primed by reserving the last item in every active crafter slot.</b>
+  <b>Keep automated recipes primed by reserving the final ingredient in every active Crafter slot.</b><br>
+  <b>Protect input patterns from hopper extraction while completed recipes continue into output containers.</b>
 </p>
 <p align="center">
   <a href="https://github.com/Cobbleworks/Useful-Autocrafter-Plugin/releases"><img src="https://img.shields.io/github/v/release/Cobbleworks/Useful-Autocrafter-Plugin?include_prereleases&style=flat-square&color=4CAF50" alt="Latest Release"></a>&nbsp;&nbsp;<a href="https://github.com/Cobbleworks/Useful-Autocrafter-Plugin/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="License"></a>&nbsp;&nbsp;<img src="https://img.shields.io/badge/Java-21+-orange?style=flat-square" alt="Java Version">&nbsp;&nbsp;<img src="https://img.shields.io/badge/Minecraft-1.21+-green?style=flat-square" alt="Minecraft Version">&nbsp;&nbsp;<img src="https://img.shields.io/badge/Platform-Paper-yellow?style=flat-square" alt="Platform">&nbsp;&nbsp;<a href="https://github.com/Cobbleworks/Useful-Autocrafter-Plugin/issues"><img src="https://img.shields.io/github/issues/Cobbleworks/Useful-Autocrafter-Plugin?style=flat-square&color=orange" alt="Open Issues"></a>
@@ -11,7 +12,7 @@
 
 Useful Autocrafter prevents an automated recipe from consuming the final item in any enabled crafter slot. It also stops hoppers from pulling ingredient stacks out of the Crafter inventory, allowing a hopper at the output face to collect crafted results without slowly dismantling the recipe. Production pauses at a one-item reserve and resumes automatically when the ingredients are restocked.
 
-### **Core Features**
+## **Core Features**
 
 - Preserves one ingredient in every enabled, occupied crafter slot
 - Prevents hoppers and other automated inventories from extracting Crafter ingredients
@@ -20,7 +21,7 @@ Useful Autocrafter prevents an automated recipe from consuming the final item in
 - Can be enabled, disabled, or inspected at runtime
 - Requires no configuration file or external plugin
 
-### **Supported Platforms**
+## **Supported Platforms**
 
 - **Server software:** Paper and compatible Paper forks
 - **Minecraft:** 1.21 or newer
@@ -29,15 +30,19 @@ Useful Autocrafter prevents an automated recipe from consuming the final item in
 
 ## **Table of Contents**
 
-1. [Getting Started](#getting-started)
-2. [Third-Party Plugins](#third-party-plugins)
-3. [How It Works](#how-it-works)
-4. [Commands](#commands)
-5. [Permissions](#permissions)
-6. [Operational Notes](#operational-notes)
-7. [Building from Source](#building-from-source)
-8. [License](#license)
-9. [Screenshots](#screenshots)
+1. [Core Features](#core-features)
+2. [Supported Platforms](#supported-platforms)
+3. [Getting Started](#getting-started)
+4. [Third-Party Plugins](#third-party-plugins)
+5. [How It Works](#how-it-works)
+   - [Hopper and Container Automation](#hopper-and-container-automation)
+   - [Examples](#examples)
+6. [Commands](#commands)
+7. [Permissions](#permissions)
+8. [Operational Notes](#operational-notes)
+9. [Building from Source](#building-from-source)
+10. [License](#license)
+11. [Screenshots](#screenshots)
 
 ## **Getting Started**
 
@@ -47,6 +52,8 @@ Useful Autocrafter prevents an automated recipe from consuming the final item in
 4. Run `/usefulcrafter` to confirm the current state.
 
 To test the reserve behavior, configure a Crafter recipe and put two or more ingredients in every required slot. Point the Crafter's output face toward a hopper or other container. It will craft normally until one required slot reaches a single item, then wait for restocking; the output container can keep collecting completed recipes without extracting the ingredients.
+
+Feed ingredients into the Crafter from the top or sides and collect results in front of its output face. A hopper directly below the block cannot extract inputs while protection is enabled, so compact builds should route the crafted item into the collection line instead of trying to pull it from the recipe grid.
 
 > Useful Autocrafter uses Paper's crafter event API and does not support Spigot or CraftBukkit.
 
