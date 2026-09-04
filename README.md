@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/plugin-logo.png" alt="Cobbleworks - Useful Autocrafter Plugin" width="200" height="200" />
+  <img src="images/plugin-banner.png" alt="Cobbleworks - Useful Autocrafter Plugin banner" width="818" />
 </p>
 <h1 align="center">Cobbleworks - Useful Autocrafter Plugin</h1>
 <p align="center">
